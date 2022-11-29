@@ -1,14 +1,12 @@
-<?php
+<?php declare(strict_types=1);
 
-declare(strict_types=1);
+use app\App;
 
-include "./fabric/Order.php";
-
+require __DIR__ . '/vendor/autoload.php';
 
 try {
-	$order = new Order(123);
-
-	print_r($order);
+	$app = new App();
+	$app->runFactory();
 
 	print_r("<hr>End");
 } catch (Throwable $e) {
