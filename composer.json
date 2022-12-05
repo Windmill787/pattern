@@ -12,5 +12,7 @@
             "email": "Windmill78max@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+		"ext-simplexml": "*"
+	}
 }

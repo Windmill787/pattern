@@ -8,6 +8,8 @@ try {
 	$app = new App();
 	$app->runFactory();
 
+	
+
 	print_r("<hr>End");
 } catch (Throwable $e) {
 	print_r("<pre>$e</pre>");
