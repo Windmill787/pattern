@@ -9,6 +9,6 @@ class JsonAdapter implements AdapterInterface
 	public function getData($response): array
 	{
 		/** @var $response JsonResponse */
-		return json_decode($response->getJsonData());
+		return json_decode($response->getJsonData(), true);
 	}
 }

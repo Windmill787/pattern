@@ -7,8 +7,7 @@ require __DIR__ . '/vendor/autoload.php';
 try {
 	$app = new App();
 	$app->runFactory();
-
-	
+	$app->runAdapter();
 
 	print_r("<hr>End");
 } catch (Throwable $e) {
