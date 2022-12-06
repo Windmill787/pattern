@@ -6,9 +6,12 @@ use app\adapter\response\JsonResponse;
 
 class JsonAdapter implements AdapterInterface
 {
-	public function getData($response): array
+	public function __construct(readonly JsonResponse $response)
 	{
-		/** @var $response JsonResponse */
-		return json_decode($response->getJsonData(), true);
+	}
+
+	public function getData(): array
+	{
+		return json_decode($this->response->getJsonData(), true);
 	}
 }

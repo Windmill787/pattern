@@ -4,5 +4,5 @@ namespace app\adapter;
 
 interface AdapterInterface
 {
-	public function getData($response): array;
+	public function getData(): array;
 }

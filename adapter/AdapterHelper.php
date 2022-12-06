@@ -4,11 +4,11 @@ namespace app\adapter;
 
 class AdapterHelper
 {
-	public static function getAdapter(AdapterType $adapterType): AdapterInterface
+	public static function getAdapter(AdapterType $adapterType, $response): AdapterInterface
 	{
 		return match ($adapterType) {
-			AdapterType::JSON => new JsonAdapter(),
-			AdapterType::XML => new XmlAdapter()
+			AdapterType::JSON => new JsonAdapter($response),
+			AdapterType::XML => new XmlAdapter($response)
 		};
 	}
 }

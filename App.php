@@ -54,8 +54,9 @@ class App
 		];
 
 		foreach ($responses as $response) {
-			$adapter = AdapterHelper::getAdapter($response['type']);
-			$data = $adapter->getData($response['response']);
+			$adapter = AdapterHelper::getAdapter($response['type'], $response['response']);
+			print_r($adapter->response);
+			$data = $adapter->getData();
 			print_r("<br>");
 			$string = json_encode($data);
 			print_r("Price: {$response['type']->value}<br>Data: $string<br>");

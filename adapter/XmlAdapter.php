@@ -6,9 +6,12 @@ use app\adapter\response\XmlResponse;
 
 class XmlAdapter implements AdapterInterface
 {
-	public function getData($response): array
+	public function __construct(readonly XmlResponse $response)
 	{
-		/** @var $response XmlResponse */
-		return array($response->getXmlData());
+	}
+
+	public function getData(): array
+	{
+		return array($this->response->getXmlData());
 	}
 }
